@@ -1,0 +1,1086 @@
+@charset "utf-8";
+
+/******************************* Import Styles ******************************/
+
+@import url("animate.css");
+@import url("../plugins/prettyphoto/css/prettyPhoto.css");
+@import url("../plugins/revolution/css/settings.css");
+
+
+
+/************************** Import Fonts and Icons *************************/
+
+@import url("http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800");
+@font-face {
+  font-family: 'Skinny';
+  src: url('../fonts/skinny-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+/***************************************************************************/
+/****************************  Reset & Clearfix ****************************/
+
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,a,img,small,sub,b,dl,dd,dt,ul,li,label,article,details,footer,header,menu,nav,input,textarea,select{
+		background:transparent;
+		border:0;
+		outline:0;
+		padding:0;
+		margin:0;
+}
+
+.clearfix:after {
+		clear: both;
+		content: " ";
+		display: block;
+		font-size: 0;
+		height: 0;
+		line-height: 0;
+		visibility: hidden;
+		width: 0;
+}	
+
+img {
+	width: 100%;
+}
+
+
+
+
+
+/***************************************************************************/
+/************************* General Styles for Tags *************************/
+
+a {
+	color:#00c887; 
+} 
+
+a:hover {
+	color: #00895f;
+	text-decoration: none;
+}
+
+a:focus, a:hover, a:focus, .btn:focus {
+	outline: none;
+}
+
+address { 
+	font-size: 1.6em; 
+	line-height:2em; 
+}
+
+html,
+body{
+	background:#fff;
+	color:#404040;	
+	font-family: 'Dosis', sans-serif;
+	font-size: 80%;	
+	font-weight:400; 
+	height:100%;
+	line-height: 1;
+	outline: none;
+	width:100%;	
+}	
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:400; 
+	font-family: 'Dosis', sans-serif;
+	color:#404040; 
+}
+
+h1 { font-size: 2.5em; line-height:1.8em; }
+h2 { font-size: 2.5em; line-height:1.8em; }
+h3 { font-size: 1.8em; line-height:3.5em; font-weight:600; }
+h4 { font-size: 1.7em; line-height:1.4em; }
+h5 { font-size: 1.4em; line-height:1.3em; }
+h6 { font-size: 1.3em; line-height:1em; }
+
+p { 
+	font-size: 1.6em; 
+	line-height:1.6em; 
+	margin: 2% 0;
+}
+
+
+
+li {
+    color: #555;
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: background-color .3s ease, border .3s ease, color .3s ease, opacity .3s ease-in-out, outline .3s ease, padding .3s ease, margin .3s ease;
+       -moz-transition: background-color .3s ease, border .3s ease, color .3s ease, opacity .3s ease-in-out, outline .3s ease, padding .3s ease, margin .3s ease;
+        -ms-transition: background-color .3s ease, border .3s ease, color .3s ease, opacity .3s ease-in-out, outline .3s ease, padding .3s ease, margin .3s ease;
+         -o-transition: background-color .3s ease, border .3s ease, color .3s ease, opacity .3s ease-in-out, outline .3s ease, padding .3s ease, margin .3s ease;
+            transition: background-color .3s ease, border .3s ease, color .3s ease, opacity .3s ease-in-out, outline .3s ease, padding .3s ease, margin .3s ease;
+}
+
+
+
+
+
+/***************************************************************************/
+/********************** General Styles for Components **********************/
+
+/********************************* Carousel *******************************/
+
+.cu-controls {
+	padding: 40px 0 0 0;
+	position: relative;
+}
+
+.cu-controls > div {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.cu-controls a.sercacontrol {
+	border-radius: 50%;
+	border: 1px solid #dddddd;
+	color: #aaaaaa;
+	display: block;
+	padding: 10px;
+	position: absolute;
+	background: #fff;
+}
+
+.cu-controls a.sercacontrol:hover {
+	color: #00885e;
+	border: 1px solid #00c88a;
+}
+
+.cu-controls a.sercacontrol.next {
+	left: 100%;
+	margin-left: -36px;
+}
+
+.cu-controls .carousel-indicators {
+	width:	95%;
+	position: static;
+	margin: 0 auto;
+}
+
+.cu-controls .carousel-indicators li {
+	background: none;
+	border-radius: 0;
+	border: none;
+	height: auto;
+	margin: 0;
+	text-indent: 0;
+}
+
+.cu-controls .carousel-indicators li.middle {
+	border-top: 1px solid #dddddd;
+	width: 33.3%;
+	display: block;
+	float: left;
+	font-size: 1.3em;
+	margin-top: 15px;
+	padding-top: 7px;
+	text-align: center;
+}
+
+.cu-controls .carousel-indicators li.middle:hover,
+.cu-controls .carousel-indicators li.middle.active {
+	border-top: 3px solid #00c88a;
+	color: #00885e;
+	padding-top: 5px;
+}
+
+
+
+/*****************************    jPlayer    *******************************/
+.player-container {
+	height: 240px;
+	background: #e2ecf6;
+}
+
+.player-container .jp-jplayer {
+	margin: 0 auto;
+}
+
+.jp-gui {
+	background: #fff;
+	height: 85px;
+	padding: 20px;
+}
+
+.jp-gui .jp-btn {
+	background: #00895f;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	float: left;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	width: 45px;
+	top: 0;
+}
+
+.jp-gui .jp-btn i {
+	font-size: 3em;
+	top: 6px;
+}
+
+.jp-gui .jp-btn:hover {
+	background: #00c889;
+	color: #fff;
+}
+
+.jp-gui .jp-pause { display: none; }
+
+.jp-gui .jp-play i { left: 2px; }
+.jp-gui .jp-pause i { left: 1px; }
+
+.jp-gui .jp-progress {
+	width: 80%;
+	margin: 0 0 0 100px;
+}
+
+.jp-gui .jp-progress .jp-seek-bar {
+	background: #00895F;
+	border-radius: 3px;
+	height: 13px;
+}
+
+.jp-gui .jp-progress .jp-seek-bar .jp-play-bar {
+	border-radius: 3px;
+	background: #00c889;
+	height: 13px;
+}
+
+.jp-gui .jp-progress .jp-current-time,
+.jp-gui .jp-progress .jp-duration {
+	line-height: 13px;
+	font-size: 12px;
+}
+
+.jp-gui .jp-progress .jp-current-time{
+	float: left;
+	margin-left: -40px;
+}
+
+.jp-gui .jp-progress .jp-duration {
+	float: right;
+	margin-right: -40px;
+}
+
+.jp-gui .jp-title {
+	font-size: 16px;
+	text-transform: uppercase;
+	margin: 5px 0 14px 60px;
+}
+.jp-gui .jp-video-play {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 242px;
+	margin: 0 15px;
+}
+
+.jp-gui .jp-video-play .jp-video-play-icon {
+	top: 50%;
+	position: absolute;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	margin: -50px 0 0 -50px;
+	font-size: 2.3em;
+	opacity: 0.8;
+}
+
+.jp-gui .jp-video-play .jp-video-play-icon:hover {
+	opacity: 1;
+}
+
+.jp-gui .jp-video-play .jp-video-play-icon i {
+	top: 12px;
+	left: 6px;
+}
+
+
+
+/***************************** Go to top arrow *****************************/
+
+.scrollup {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 80px;
+	right: 30px;
+	display: none;
+	background: transparent url("../img/to-top.png") center center no-repeat;
+}
+
+.scrollup i {
+	color: #fff;
+	text-align: center;
+	display: block;
+	line-height: 48px;
+	font-size: 20px;
+}
+
+.scrollup:hover { 
+	opacity: 0.7;
+}
+
+
+
+
+
+
+/***************************************************************************/
+/******************* General Styles for Commons Sections *******************/
+
+/********************************** General ********************************/
+
+.generic {
+	padding: 90px 30px;
+}
+
+.title {
+	margin: 0 0 40px 0;
+}
+
+.title h2 {
+	font-weight: 700;
+	font-size: 1.7em;
+	line-height: 1;
+}
+
+.title .dotts {
+	font-size: 1.7em;
+}
+
+.btn {
+	background: rgba(0, 0, 0, 0);
+	border-radius: 0;
+	border: 1px solid #FFF;
+	color: #FFF;
+	font-size: 1.5em;
+	font-weight: 500;
+	margin-top: 0px;
+	padding: 7px 28px;
+	text-transform: uppercase;
+}
+
+.btn:hover {
+	background: #00895f;
+	color: #fff;
+}
+
+i {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.navbar-toggle {
+	background: #00c88a;
+	margin-top: 28px;
+}
+
+.navbar-toggle span {
+	color: #fff;
+	font-size: 2em;
+}
+
+
+
+/***************************************************************************/
+/************************ General Styles for Header ************************/
+
+header.navbar {
+	padding: 20px 0;
+	margin:0;
+	background: white;
+	border-bottom: 5px solid #00c88a;
+}
+
+header .navbar-brand {
+    line-height: 1;
+    padding: 0;
+}
+
+header.navbar ul {
+	margin-top: 2%;
+}
+
+header.navbar ul li a {
+	font-weight: 500;
+	font-size: 1.6em;
+	line-height: 2;
+	padding: 0;
+	margin: 0 15px;
+	color: #555;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+	background: #fff;
+	color: #00885e;
+}
+
+.navbar-nav>li.active>a {
+	border-bottom: 2px dotted #00c88a;
+	color: #00c88a;
+}
+
+
+
+
+
+/***************************************************************************/
+/************************ General Styles for Footer ************************/
+footer {
+	background: #232323;
+	height: 100px;
+}
+
+footer .copy {
+	padding: 25px 0 0 0;
+}
+
+footer .copy h6 {
+	text-align: center;
+	line-height: 2em;
+	font-size: 1.5em;
+	color: #ccc;
+}
+
+
+/***************************************************************************/
+/*********************** Specific Styles for Sections  *********************/
+
+/********************************** Slider  ********************************/
+
+.fullwidthbanner-container {
+	font-family: 'Skinny', 'Dosis', sans-serif;
+	margin-top: 120px;
+	position: relative;
+}
+
+.caption {
+	color: #fff;
+	font-size: 3em;
+}
+
+.fullwidthbanner-container .leaves {
+	height: 100%;
+}
+
+.slide1 .text {
+	font-size: 10em;
+	letter-spacing: 0.05em;
+	line-height: 1em;
+	overflow: hidden;
+	padding: 10px;
+	text-align: right;
+	text-transform: uppercase;
+	white-space: normal!important;
+	width: 450px;
+	margin-right: 0.5em;
+}
+
+.slide1 .text.a { margin-top: 0.2em; }
+.slide1 .text.b { margin-top: 1.2em; }
+.slide1 .text.c { margin-top: 2.1em; }
+
+.slide1 .text span { color: #7bdade; }
+
+
+
+.slide2 .title {
+	font-size: 8em;
+	overflow: hidden;
+	padding: 10px;
+	text-align: left;
+	text-transform: uppercase;
+	white-space: normal!important;
+	width: 6em;
+	margin: 1.5em 0 0 1em;
+}
+
+.slide2 .text {
+	font-size: 2.5em;
+	font-weight: 400;
+	letter-spacing: 0.2em;
+	line-height: 1.1em;
+	overflow: hidden;
+	text-align: left;
+	text-transform: uppercase;
+	white-space: normal!important;
+	width: 15em;
+	margin: 8.5em 0 0 3em;
+}
+
+.slide2 .text .pink { color: #fea8a9; }
+.slide2 .text .yellow { color: #d6d59d; }
+.slide2 .text .purple { color: #dba7f2; }
+.slide2 .text .green { color: #b9fdd8; }
+
+.slide1 .quote,
+.slide2 .quote {
+	font-size: 2.5em;
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: 700;
+	margin-top: 13em;
+}
+
+.slide1 .quote { margin-right: 3em; }
+.slide2 .quote { margin-left: 15em; }
+
+
+
+/****************************** Service & Study ****************************/
+
+.info-box {
+	padding: 0% 3% 3% 3%;
+	background: #e1ecf6;
+	border: 1px solid #9fafbd;
+}
+
+.info-box p  {
+	margin: 0;
+}
+
+.info-box h3 {
+	color: #275462;
+}
+
+.info-box ul  {
+	margin: 3% 0 6% 0;
+}
+
+.info-box ul li {
+	font-size: 1.5em;
+	list-style-position: inside;
+	line-height: 1.5;
+	margin: 0 0;
+}
+
+.service .highlight{
+	color: #275462;
+	font-weight: 500;
+}
+
+h2 i {
+	color: #fff;
+	background: #00885e;
+	border-radius: 50%;
+	padding: 10px 11px 10px 10px;
+	margin: 0 0 0 1%;
+	display: inline-block;
+	font-size: 0.6em;
+	line-height: 1;
+	width: auto;
+	height: auto;
+}
+
+.service .cu-controls {
+	padding: 40px 0 0 0;
+}
+
+.service .cu-controls > div {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.service .cu-controls a.sercacontrol {
+	color: #aaaaaa;
+	border-radius: 50% 50% 50% 50%;
+	border: 1px solid #dddddd;
+	padding: 10px;
+	display: block;
+	float: left;
+}
+.service .cu-controls a.sercacontrol:hover {
+	color: #00885e;
+	border: 1px solid #00c88a;
+}
+
+.service .cu-controls a.middle {
+	border-top: 1px solid #dddddd;
+	width: 31.2%;
+	display: block;
+	float: left;
+	font-size: 1.3em;
+	margin-top: 15px;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.service .cu-controls a.middle:hover {
+	border-top: 3px solid #00c88a;
+	color: #00885e;
+}
+
+
+
+/******************************* Our Ministries ****************************/
+
+.ministries {
+	background: #f0f2f5;
+}
+.ministries .title {
+	margin-bottom: 0;
+}
+
+.ministries .cu-controls {
+	padding: 0;
+}
+
+.ministries .cu-controls span {
+	padding: 5px;
+	background: #fff;
+	border-radius: 50%;
+	border: 1px solid #ddd;
+	margin: 9px 0 0 0;
+}
+
+.ministries .cu-controls .carousel-indicators .middle:hover,
+.ministries .cu-controls .carousel-indicators .middle.active {
+	margin-top: 14px;
+	padding-top: 6px;
+}
+
+
+.ministries .cu-controls a.sercacontrol {
+	background: #00895f;
+	border-radius: 0;
+	border: none;
+	color: #fff;
+	font-size: 1.5em;
+	left: 5px;
+	opacity: 0.7;
+	padding: 13px 10px;
+	top: -335px;
+	z-index: 99;
+}
+
+.ministries .cu-controls a.sercacontrol:hover {
+	background: #00895f;
+	border: none;
+	color: #fff;
+	opacity: 1;
+}
+
+.ministries .cu-controls a.sercacontrol.next {
+	margin-left: -63px;
+	left: 100%;
+}
+
+.ministries .item {
+	height: 420px;
+	overflow: visible;
+	padding: 10px 30px;
+}
+
+.ministries .groups {
+	border-radius: 5px;
+	float: left;
+	height: 375px;
+	left: 30%;
+	margin: 10px 0 0 0; 
+	padding: 20px;
+	top: 0;
+	width: 33%;
+	z-index: 10;
+}
+.ministries .groups:hover {
+	background: #fff;
+	box-shadow: 0 0 20px rgba(200, 200, 200, 0.5);
+    -webkit-transform: scale(1.1);
+       -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+         -o-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+.ministries .groups .title {
+	font-size: 2.5em;
+	margin: 20px 0 0 0;
+}
+
+.ministries .groups .studies {
+	font-size: 1.7em;
+	margin: 0;
+}
+
+.ministries .groups .studies span {
+	font-weight: 700;
+}
+
+.ministries .groups .ministries-contact {
+	display: block;
+	color: #285363;
+	font-size: 1.7em;
+	margin: 0;
+}
+
+.ministries .groups .ministries-contact:hover {
+	font-weight: 700;
+}
+.ministries .groups .ministries-contact i {
+	font-size: .7em;
+	margin-left: 10px;
+}
+
+.ministries .groups .more {
+	background: #00895F;
+	color: #FFF;
+	display: none;
+	font-size: 1.7em;
+	padding: 10px;
+	text-align: center;
+	width: 6em;
+	margin: 20px 0 0 0;
+}
+
+.ministries .groups:hover .more {
+	display: block;
+}
+
+
+.ministries .pagination {
+	clear: both;
+	color: #00895F;
+	display: block;
+	font-size: 1.5em;
+	margin: -15px 0 0 0;
+	position: absolute;
+	text-align: center;
+	top: 400px;
+	width: 100%;
+}
+
+
+
+/****************************** Behind the Pulpit **************************/
+
+.pulpit .data {
+	margin: 8% 0;
+	padding: 4% 0;
+	color: #777777;
+	border-top: 1px solid #eeeeee;
+}
+
+
+
+/******************************** Photo Albums *****************************/
+
+.gallery {
+	background: #f0f2f5;
+}
+
+.gallery .album-title {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.8em;
+	margin: 50px 0 0 0;
+}
+
+.gallery .album-title span {
+	color: #00895f;
+}
+
+.gallery .control-arrow {
+	position: absolute;
+	width: 100%;
+	margin: -30px 0 0 0;
+}
+
+.gallery .image {
+	width: 370px;
+	position: relative;
+	float: left;
+	margin: 0 15px 2%;
+}
+
+.gallery .image a {
+	background-image: url("../img/leaves.html");
+	background-position: 50px 0;
+	display: block;
+	height: 100%;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+    -webkit-transition: opacity .3s ease-in-out;
+       -moz-transition: opacity .3s ease-in-out;
+        -ms-transition: opacity .3s ease-in-out;
+         -o-transition: opacity .3s ease-in-out;
+            transition: opacity .3s ease-in-out;
+}
+
+.gallery .image a:hover {
+	opacity: 1;
+}
+
+.gallery .image a .bg {
+	background-color: rgba(0,200,137,0.7);
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.gallery .image a .bg .plus {
+	background: #004832;
+	border-radius: 50%;
+	color: #FFF;
+	display: block;
+	font-size: 4em;
+	height: 80px;
+	padding: 17px 0 0 13px;
+	left: 50%;
+	margin: -40px 0 0 -40px;
+	position: absolute;
+	top: -60px;
+	width: 80px;
+
+    -webkit-transition: top .3s ease-in-out;
+       -moz-transition: top .3s ease-in-out;
+        -ms-transition: top .3s ease-in-out;
+         -o-transition: top .3s ease-in-out;
+            transition: top .3s ease-in-out;
+}
+
+.gallery .image a:hover .bg .plus {
+	top: 50%;
+}
+
+.gallery .image a .bg .title {
+	color: #fff;
+	display: block;
+	font-size: 1.8em;
+	padding: 250px 30px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+} 
+
+
+
+/******************************* Upcoming Events ***************************/
+
+.events .eventlist {
+	border-top: 3px solid #00c88a;
+}
+
+.events .eventlist h3 {
+	font-size: 2.5em;
+	font-weight: 400;
+}
+
+.events .eventlist h3 span {
+	font-size: 0.7em;
+	font-weight: 600;
+}
+
+.events .eventlist ul li {
+	border-bottom: 1px solid #f6f6f6;
+	float: left;
+	list-style: none;
+	padding: 20px 0;
+	width: 100%;
+}
+
+.events .eventlist ul li .event-date {
+	float: left;
+	text-align: center;
+	font-weight: 400;
+	font-size: 2.8em;
+	margin-right: 20px;
+}
+
+.events .eventlist ul li .event-date .number {
+
+}
+
+.events .eventlist ul li .event-date .month {
+	color: #dddddd;
+	text-transform: uppercase;
+	font-size: 0.5em;
+	font-weight: 600;
+}
+
+
+.events .eventlist ul li .event-info {
+	font-size: 1.5em;
+	padding-top: 20px;
+}
+
+.events .infobox {
+	border-radius: 50%;
+	color: #fff;
+	font-size: 1.6em;
+	padding: 3% 0;
+	width: 60px;
+	height: 60px;
+	line-height: 1.2;
+	margin: 40% auto;
+	text-transform: uppercase;
+}
+
+.events .infobox.light {
+	background-color: #00885e;
+}
+
+.events .infobox.dark {
+	background-color: #00c88a;
+}
+
+.events .infobox .mon {
+	margin-top: 5px;
+}
+
+.events a.more {
+	color: #004832;
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+.events a.more:hover {
+	color: #00c88a;
+}
+
+.control-arrow {
+	margin: 3% 0 0 0;
+}
+
+.control-arrow>div {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.control-arrow a {
+	font-size: 1.5em;
+}
+
+.control-arrow a i {
+	border: 1px solid #00c88a;
+	color: #00c88a;
+	font-size: 0.8em;
+	padding: 11px 8px;
+	height: 35px;
+	width: 35px;
+	margin:  0 10px;
+}
+
+.control-arrow a:hover {
+	color: #00c88a;
+}
+
+.control-arrow a:hover i{
+	background: #00885e;
+	border: 1px solid #00885e;
+	color: #fff;
+}
+
+
+
+/******************************* Latest Sermons ****************************/
+
+.sermons {
+	background: #f0f2f5;
+}
+
+.sermons .playlist {
+	background: #fff;
+	padding: 30px;
+	margin: 0 15px;
+}
+
+.sermons .playlist h3 {
+	font-size: 3em;
+	font-weight: 500;
+	line-height: 2em;
+}
+
+.sermons .playlist li {
+	list-style: none;
+	width: 100%;
+	white-space: nowrap; 
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+
+.sermons .playlist li .active {
+	color: #00c889;
+}
+
+.sermons .playlist a {
+	font-size: 1.7em;
+	line-height: 2em;
+	color: #aaa;
+}
+
+.sermons .playlist .loadmore {
+	text-align: center;
+	display: block;
+}
+
+
+/*********************************** Contact *******************************/
+
+.contact {
+	min-height: 575px;
+	padding: 0;
+	color: white;
+	overflow: hidden;
+}
+
+.contact h2 {
+	font-size: 2.5em;
+}
+
+.contact p, 
+.contact h2 {
+	color: #fff;
+	font-weight: 500;
+}
+
+.contact #map {
+	min-height: 575px;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+.contact #contact_bg {
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	min-height: 575px;
+}
+
+.contact .container {
+	padding: 60px 0;
+}
+
+.contact .form-group {
+	width: 48%;
+}
+
+.contact .form-control {
+	border-radius: 0;
+	border: none;
+	margin: 0 0 1em 0;
+	font-size: 1.6em;
+}
+
+.contact .form-control[type="text"],
+.contact .form-control[type="email"] {
+	height: 43px;
+}
