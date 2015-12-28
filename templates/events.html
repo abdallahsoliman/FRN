@@ -1,0 +1,32 @@
+<section id="events" class="screen">
+    <div class="container">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="row">
+            <div class="event-column col-md-6">
+                <h3 class="month-header">January 2016</h3>
+                <ul class="event-list">
+                    {% for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] %}
+                        <li>
+                            <a href="">
+                                <h4 class="event-title">Event #{{ i }}</h4>
+                                <h4 class="date">01/15/16</h4>
+                                <p>Lorem Ipsum blablabla event description goes here yada yada yada.</p>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="event-column col-md-6">
+                <h3 class="month-header">February 2016</h3>
+            </div>
+        </div>
+        <div class="row">
+            <nav>
+                <ul class="pager">
+                    <li><a href="#">Previous Month</a></li>
+                    <li><a href="#">Next Month</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
