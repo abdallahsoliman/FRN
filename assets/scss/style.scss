@@ -31,8 +31,10 @@ a {
 }
 
 .navbar {
+  z-index: 999;
   background-color: #fff;
   border-bottom: 2px solid $purple;
+  margin-bottom: 0;
 
   .container-fluid {
     height: 80px;
@@ -83,10 +85,6 @@ a {
   padding-top: 90px;
   overflow: hidden;
 
-  &:first-of-type {
-    padding-top: 0;
-  }
-
   .section-title {
     margin-left: auto;
     margin-right: auto;
@@ -96,6 +94,98 @@ a {
     display: table;
     border-bottom: 2px dotted $green;
   }
+}
+
+#home {
+  -webkit-background-size: cover;
+  background-size:cover;
+
+  .container-fluid {
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    margin: -10px 0 0 0;
+    height: 105%;
+    width: 100%;
+  }
+  .row-overlay {
+    height: 105%;
+    position: relative;
+    display: block;
+    top: 5%;
+    left: -5%;
+    max-width: 100%;
+    background-size: contain !important;
+    background: url("../img/background.png") no-repeat center;
+    z-index: 998;
+  }
+  .col-md-2 {
+    opacity: 0.7;
+    position: relative;
+    bottom: 0;
+    min-height: 100%;
+    &:nth-child(even) {
+      background-color: $purple;
+    }
+    &:nth-child(odd) {
+      background-color: $green;
+    }
+  }
+}
+
+#about {
+
+  .row {
+    padding-top: 20px;
+  }
+
+  .blurb-row {
+    img {
+      height: 250px;
+      width: auto;
+      display: table-cell;
+    }
+  }
+
+  .sponsor-row {
+    h3 {
+      text-transform: uppercase;
+    }
+    .partners {
+      list-style: none;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      li {
+        display: inline-block;
+        padding: 5px 20px;
+
+        &.bon-appetit img {
+          width: 300px;
+        }
+        &.panera img {
+          width: 200px;
+        }
+        &.einstein img {
+          width: 200px;
+        }
+        &.cwru-police img {
+          width: 150px;
+        }
+      }
+    }
+  }
+
+  .description {
+    font-size: 20px;
+    display: block;
+    text-align: justify;
+  }
+
 }
 
 #events {

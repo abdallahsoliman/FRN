@@ -1,7 +1,22 @@
 <section id="about" class="screen">
     <div class="container">
         <h2 class="section-title">About</h2>
-        <div class="row">
+        <div class="row blurb-row">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='img/good-guy-cop.jpeg') }}" alt="good-guy-cop.jpeg">
+            </div>
+            <p class="col-md-6 description">
+                Our mission is to fight waste and feed people. We do this by donating the excess food from campus to our community. In addition to diverting food waste, we hold educational events on campus and in the community about issues regarding social inequality, healthy eating, food waste, and ethical service practices. We also work closely with other food and service related groups to connect multiple student organizations together through Food Forum.
+            </p>
+        </div>
+        <div class="row sponsor-row">
+            <h3>Sponsors & Partners:</h3>
+            <ul class="partners">
+                <li class="bon-appetit"><img src="{{ url_for('static', filename='img/sponsors/bon-appetit.jpg') }}" alt="bon-appetit.jpg"></li>
+                <li class="panera"><img src="{{ url_for('static', filename='img/sponsors/panera.png') }}" alt="panera.png"></li>
+                <li class="einstein"><img src="{{ url_for('static', filename='img/sponsors/einstein.png') }}" alt="einstein.png"></li>
+                <li class="cwru-police"><img src="{{ url_for('static', filename='img/sponsors/cwru-police.png') }}" alt="cwru-police.png"></li>
+            </ul>
         </div>
     </div>
 </section>
