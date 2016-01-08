@@ -22,8 +22,8 @@ a {
 .navbar {
   z-index: 999;
   background-color: #fff;
-  border-bottom: 2px solid #a31e6f;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  opacity: 0.7; }
   .navbar .container-fluid {
     height: 80px; }
   .navbar .navbar-brand {
@@ -44,10 +44,8 @@ a {
     font-size: 16px;
     line-height: 16px;
     padding-right: 8px; }
-    .navbar .nav.navbar-nav.navbar-right li:nth-child(even) a {
-      color: #689746; }
-    .navbar .nav.navbar-nav.navbar-right li:nth-child(odd) a {
-      color: #a31e6f; }
+    .navbar .nav.navbar-nav.navbar-right li a {
+      color: #0C314F; }
 
 .screen {
   height: 100%;
@@ -56,43 +54,23 @@ a {
   .screen .section-title {
     margin-left: auto;
     margin-right: auto;
-    color: #689746;
+    color: #0C314F;
     padding-bottom: 10px;
     width: auto;
     display: table;
-    border-bottom: 2px dotted #689746; }
+    border-bottom: 2px dotted #9D861F; }
 
 #home {
   -webkit-background-size: cover;
   background-size: cover; }
   #home .container-fluid {
-    height: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0; }
-  #home .row {
-    margin: -10px 0 0 0;
     height: 105%;
-    width: 100%; }
-  #home .row-overlay {
-    height: 105%;
-    position: relative;
-    display: block;
-    top: 5%;
-    left: -5%;
     max-width: 100%;
-    background-size: contain !important;
+    width: 100%;
+    padding: 0;
     background: url("../img/background.png") no-repeat center;
-    z-index: 998; }
-  #home .col-md-2 {
-    opacity: 0.7;
-    position: relative;
-    bottom: 0;
-    min-height: 100%; }
-    #home .col-md-2:nth-child(even) {
-      background-color: #a31e6f; }
-    #home .col-md-2:nth-child(odd) {
-      background-color: #689746; }
+    -webkit-background-size: cover;
+    background-size: cover; }
 
 #about .row {
   padding-top: 20px; }
@@ -146,21 +124,21 @@ a {
     max-height: 85%; }
     #events .event-column .event-list li {
       padding: 15px;
-      border: 1px dashed #689746;
+      border: 1px dashed #0C314F;
       margin-bottom: 10px;
       border-radius: 5px; }
       #events .event-column .event-list li .event-title {
         display: inline-block; }
       #events .event-column .event-list li .date {
         float: right;
-        color: #689746;
+        color: #9D861F;
         display: inline-block; }
       #events .event-column .event-list li a {
         color: #000; }
   #events .event-column:first-child {
-    border-right: 1px solid #a31e6f; }
+    border-right: 1px solid #9D861F; }
   #events .event-column .month-header {
-    color: #a31e6f;
+    color: #0C314F;
     text-align: center; }
 
 #gallery .row {
