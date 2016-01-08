@@ -1,15 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Food Recovery Network | CWRU</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+        <meta charset="utf-8">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="">
+        <link rel="author" href="https://plus.google.com/u/0/104296509460513856975"/>
+
+        <!-- google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet'>
+        <!-- css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/lightbox.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/stroke-gap-icons.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/elegant-icons.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='revolution/css/settings.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/rev-slider.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css') }} "/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/flexslider.css') }}"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/enigma.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/spacings.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+        <!-- favicons -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}"/>
+        <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='img/apple-touch-icon-72x72.png') }}"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='img/apple-touch-icon-114x114.png') }}"/>
     </head>
-    <body>
-    {% include "base/header.html" %}
-    {% block content %}{% endblock %}
+    <body data-spy="scroll" data-offset="60" data-target=".navbar-fixed-top">
+        <!-- pre-loader -->
+        <div class="loader-mask">
+            <div class="loader">
+                "Loading..."
+            </div>
+        </div>
+
+        {% include "base/header.html" %}
+        <div class="main-wrapper-onepage main oh">
+            {% block content %}{% endblock %}
+        </div>
+        {% include "base/footer.html" %}
+
+        <!-- jQuery Scripts -->
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/lightbox.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.countTo.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.appear.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.localScroll.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.scrollTo.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.flexslider-min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.simple-text-rotator.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='revolution/js/jquery.themepunch.tools.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/rev-slider.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.fitvids.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/enigma.js') }}"></script>
     </body>
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </html>

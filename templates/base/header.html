@@ -1,30 +1,59 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapsible" aria-expanded="false">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="#" class="navbar-brand">
-                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="FRN">
-            </a>
-            <!-- TODO: add divider between these logos -->
-            <a href="#" class="navbar-brand case-logo">
-                <img src="{{ url_for('static', filename='img/cwru-logo.jpg') }}" alt="">
-            </a>
-        </div>
-        <div id="navbar-collapsible" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="">Volunteer</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="">Donate</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<!-- Navigation -->
+<header class="nav-type-1" id="home">
+    <nav class="navbar navbar-fixed-top">
+        <div class="navigation-overlay">
+            <div class="container-fluid relative">
+                <div class="row">
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <!-- Logo -->
+                        <div class="logo-container">
+                            <div class="logo-wrap local-scroll">
+                                <a href="#home">
+                                    <img class="logo" src="{{ url_for('static', filename='img/logo.png')}}" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div> <!-- end navbar-header -->
+
+
+                    <div class="col-md-8 col-xs-12 nav-wrap">
+                        <div class="collapse navbar-collapse text-center" id="navbar-collapse">
+                            <ul class="nav navbar-nav local-scroll text-center">
+                                <li class="active"><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#events">Events</a></li>
+                                <li><a href="#volunteer">Volunteer</a></li>
+                                <li><a href="#donate">Donate</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- end col -->
+
+                    <div class="menu-socials hidden-sm hidden-xs">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-behance"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </div> <!-- end navigation -->
+    </nav> <!-- end navbar -->
+</header> <!-- end navigation -->
