@@ -1,0 +1,39 @@
+<section class="section-wrap intro" id="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-8 col-sm-offset-2 text-center wow slideInUp" data-wow-duration="1.2s"
+                 data-wow-delay="0s">
+                <h2 class="intro-heading heading-frame">About FRN</h2>
+                <p class="intro-text mb-60">
+                    Our mission is to fight waste and feed people.
+                    We do this by donating the excess food from campus to our community.
+                    In addition to diverting food waste, we hold educational events on campus and in the community about
+                    issues regarding social inequality, healthy eating, food waste, and ethical service practices.
+                    We also work closely with other food and service related groups to connect multiple student
+                    organizations together through Food Forum.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="row heading">
+            <div class="col-md-6 col-md-offset-3">
+                <h2 class="text-center bottom-line">Partners & Donors</h2>
+                <p class="subheading text-center">We couldn't do it without them!</p>
+            </div>
+        </div>
+
+        {% for sponsor_set in group_rows(sponsors, 3) %}
+        <div class="row">
+            {% for sponsor in sponsor_set %}
+                <div class="col-sm-4 client-logo">
+                    <img height={{ sponsor['height'] }} src="{{ url_for('static', filename="img/sponsors/%s" % sponsor['img']) }}" alt="{{ sponsor['name'] }}">
+                </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+    </div>
+</section>

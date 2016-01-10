@@ -9,5 +9,22 @@
   #home .hero-message.text-rotator h1 {
     color: #000;
     margin-left: -10%; }
+    #home .hero-message.text-rotator h1 span {
+      display: block; }
+      #home .hero-message.text-rotator h1 span:first-of-type {
+        font-size: 1.5em; }
+      #home .hero-message.text-rotator h1 span:last-of-type {
+        font-size: 1.3em; }
+    #home .hero-message.text-rotator h1 .emphasize {
+      margin-top: 10px;
+      font-weight: 600;
+      color: #9D861F; }
+
+#about .client-logo {
+  border: none;
+  padding: 10px 0; }
+
+#contact .contact-item span {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

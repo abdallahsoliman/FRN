@@ -44,8 +44,8 @@
         {% include "base/header.html" %}
         <div class="main-wrapper-onepage main oh">
             {% block content %}{% endblock %}
+            {% include "base/footer.html" %}
         </div>
-        {% include "base/footer.html" %}
 
         <!-- jQuery Scripts -->
         <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>

@@ -1,0 +1,46 @@
+<section class="section-wrap bg-light from-blog" id="events">
+    <div class="container">
+
+        <div class="row heading">
+            <div class="col-md-6 col-md-offset-3">
+                <h2 class="text-center bottom-line">Upcoming Events</h2>
+                <p class="subheading text-center">Come out and show your support for FRN!</p>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div id="owl-blog" class="owl-carousel owl-theme">
+                    {% for event in events  %}
+                    <div class="blog-col {% if is_last(event, events) %}last{% endif %}">
+                        <div class="entry-img">
+                            <a href="blog-single.html">
+                                <img height={{ event['height'] }} src="{{ url_for('static', filename='img/events/%s' % event['flyer_img']) }}" alt="">
+                            </a>
+                        </div>
+                        <div class="entry-box">
+                            <div class="entry-title">
+                                <h4><a href="blog-single.html">{{ event['name'] }}</a></h4>
+                            </div>
+                            <ul class="entry-meta">
+                                <li><a href="#">{{ event['date'] }}</a></li>
+                            </ul>
+                            <div class="entry-content">
+                                <p>{{ event['description'] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="customNavigation mt-40 text-center">
+                    <a class="prev"><i class="icon arrow_left"></i></a>
+                    <a class="next"><i class="icon arrow_right"></i></a>
+                </div>
+
+            </div> <!-- end row -->
+        </div>
+    </div>
+</section>
