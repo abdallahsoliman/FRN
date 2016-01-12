@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from settings import Common
 import yaml, os, re
+import stripe
 
 
 application = Flask(__name__)
@@ -10,11 +11,23 @@ application.config.from_object(Common)
 def index():
     sponsors = get_config("sponsors")
     events = get_config("events")
+    key = application.config['STRIPE_KEYS']['publishable']
     return render_template(
             "index.html",
             sponsors=sponsors,
             events=events,
+            key=key,
     )
+
+@application.route("/charge")
+def charge():
+    print("charge function")
+    # stripe.Charge.create(
+    #     amount=
+    #     currency=
+    #     source=
+    #     description="Donation to CWRU Food Recovery Network via online site"
+    # )
 
 def get_config(filename):
     """

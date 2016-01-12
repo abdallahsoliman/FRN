@@ -1,0 +1,59 @@
+<section class="section-wrap intro" id="donate">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4 text-center wow slideInUp" data-wow-duration="1.2s"
+                 data-wow-delay="0s">
+                <h2 class="text-center bottom-line">Donate Food</h2>
+                <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae arcu blandit, varius
+                    dui ac, dignissim eros. Integer eget lobortis massa. Mauris odio nisi, congue ut nisl ac, pretium
+                    pharetra mi. Nam risus turpis, sodales non lorem ut, maximus placerat justo. Ut hendrerit accumsan
+                    posuere. Fusce pulvinar felis nibh, sit amet bibendum nibh placerat non. Class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus feugiat commodo
+                    mollis. Sed eu tempor risus. Proin euismod sapien in erat convallis cursus. Sed non odio a felis
+                    maximus laoreet sed id lacus. Curabitur non felis eget nisi sagittis lacinia.</p>
+            </div>
+            <div class="col-sm-4 text-center wow slideInUp" data-wow-duration="1.2s"
+                 data-wow-delay="0s">
+                <h2 class="text-center bottom-line">Donate Money</h2>
+                <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae arcu blandit, varius
+                    dui ac, dignissim eros. Integer eget lobortis massa. Mauris odio nisi, congue ut nisl ac, pretium
+                    pharetra mi. Nam risus turpis, sodales non lorem ut, maximus placerat justo. Ut hendrerit accumsan
+                    posuere. Fusce pulvinar felis nibh, sit amet bibendum nibh placerat non. Class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus feugiat commodo
+                    mollis. Sed eu tempor risus. Proin euismod sapien in erat convallis cursus. Sed non odio a felis
+                    maximus laoreet sed id lacus. Curabitur non felis eget nisi sagittis lacinia.</p>
+                <form action="{{ url_for('charge') }}" method="post">
+                    <div class="input-group donate-money">
+                        <span class="input-group-addon">$</span>
+                        <input
+                                class="form-control currency" id="donate-amount"
+                                min="0"
+                                max="1000"
+                                step="0.01"
+                                value="5"
+                                type="number"
+                                data-number-stepfactor="100"
+                                data-number-to-fixed="2"
+                        />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Donate</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4 text-center wow slideInUp" data-wow-duration="1.2s"
+                 data-wow-delay="0s">
+                <h2 class="text-center bottom-line">Donate Time</h2>
+                <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae arcu blandit, varius
+                    dui ac, dignissim eros. Integer eget lobortis massa. Mauris odio nisi, congue ut nisl ac, pretium
+                    pharetra mi. Nam risus turpis, sodales non lorem ut, maximus placerat justo. Ut hendrerit accumsan
+                    posuere. Fusce pulvinar felis nibh, sit amet bibendum nibh placerat non. Class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus feugiat commodo
+                    mollis. Sed eu tempor risus. Proin euismod sapien in erat convallis cursus. Sed non odio a felis
+                    maximus laoreet sed id lacus. Curabitur non felis eget nisi sagittis lacinia.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
