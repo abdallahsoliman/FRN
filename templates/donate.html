@@ -13,7 +13,7 @@
                     mollis. Sed eu tempor risus. Proin euismod sapien in erat convallis cursus. Sed non odio a felis
                     maximus laoreet sed id lacus. Curabitur non felis eget nisi sagittis lacinia.</p>
             </div>
-            <div class="col-sm-4 text-center wow slideInUp" data-wow-duration="1.2s"
+            <div id="donate-money-container" class="col-sm-4 text-center wow slideInUp" data-wow-duration="1.2s"
                  data-wow-delay="0s">
                 <h2 class="text-center bottom-line">Donate Money</h2>
                 <p class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae arcu blandit, varius
@@ -23,7 +23,12 @@
                     sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus feugiat commodo
                     mollis. Sed eu tempor risus. Proin euismod sapien in erat convallis cursus. Sed non odio a felis
                     maximus laoreet sed id lacus. Curabitur non felis eget nisi sagittis lacinia.</p>
-                <form action="{{ url_for('charge') }}" method="post">
+                <form action="{{ url_for('donate') }}" method="post">
+                    <script src="https://checkout.stripe.com/checkout.js"></script>
+                    <script>
+                        var stripeKey = "{{ stripeKey }}";
+                        var donateURL = "{{ url_for('donate') }}";
+                    </script>
                     <div class="input-group donate-money">
                         <span class="input-group-addon">$</span>
                         <input
@@ -37,7 +42,7 @@
                                 data-number-to-fixed="2"
                         />
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Donate</button>
+                            <button id="btn-donate" class="btn btn-default" type="button">Donate</button>
                         </span>
                     </div>
                 </form>

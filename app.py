@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from settings import Common
 import yaml, os, re
 import stripe
@@ -6,28 +6,38 @@ import stripe
 
 application = Flask(__name__)
 application.config.from_object(Common)
+stripe.api_key = application.config['STRIPE_KEYS']['secret']
 
 @application.route("/")
 def index():
     sponsors = get_config("sponsors")
     events = get_config("events")
-    key = application.config['STRIPE_KEYS']['publishable']
+    stripeKey = application.config['STRIPE_KEYS']['publishable']
     return render_template(
             "index.html",
             sponsors=sponsors,
             events=events,
-            key=key,
+            stripeKey=stripeKey,
     )
 
-@application.route("/charge")
-def charge():
-    print("charge function")
-    # stripe.Charge.create(
-    #     amount=
-    #     currency=
-    #     source=
-    #     description="Donation to CWRU Food Recovery Network via online site"
-    # )
+@application.route("/charge", methods=['POST'])
+def donate():
+    try:
+        stripe.Charge.create(
+            amount = request.form['amount'],
+            currency= 'usd',
+            source = request.form['token'],
+            description="Donation to CWRU Food Recovery Network from %s" % request.form['email']
+        )
+        status = "success"
+        message= "Your donation has been processed. Thank you for your support!"
+    except stripe.CardError as e:
+        status = "danger"
+        message = e.json_body['message']
+    except (stripe.APIConnectionError, stripe.APIError, stripe.AuthenticationError, stripe.InvalidRequestError, stripe.RateLimitError) as e:
+        status = "danger"
+        message = "An error occurred while trying to process your donation. Please try again at another time."
+    return render_template('base/alert.html', message=message, status=status)
 
 def get_config(filename):
     """

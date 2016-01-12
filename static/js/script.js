@@ -7,6 +7,39 @@
 
   webshim.polyfill('forms forms-ext');
 
+  $("#btn-donate").click(function(e) {
+    var amount, stripeHandler;
+    amount = $("#donate-amount").val() * 100;
+    stripeHandler = StripeCheckout.configure({
+      key: stripeKey,
+      token: function(token) {
+        return $.ajax({
+          type: "POST",
+          url: donateURL,
+          data: {
+            token: token.id,
+            amount: amount,
+            email: token.email
+          },
+          success: function(response) {
+            console.log(response);
+            $("#donate-money-container").append(response);
+          }
+        });
+      }
+    });
+    stripeHandler.open({
+      name: "CWRU Food Recovery Network",
+      description: "Donation for CWRU Food Recovery Network via website",
+      amount: amount
+    });
+    e.preventDefault();
+  });
+
+  $(window).on('popstate', function() {
+    stripeHandler.close();
+  });
+
 }).call(this);
 
 //# sourceMappingURL=script.js.map
