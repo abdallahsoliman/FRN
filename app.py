@@ -13,11 +13,14 @@ def index():
     sponsors = get_config("sponsors")
     events = get_config("events")
     stripeKey = application.config['STRIPE_KEYS']['publishable']
+    gallery = get_gallery()
+    print(gallery)
     return render_template(
             "index.html",
             sponsors=sponsors,
             events=events,
             stripeKey=stripeKey,
+            gallery=gallery,
     )
 
 @application.route("/charge", methods=['POST'])
@@ -53,6 +56,13 @@ def get_config(filename):
             data.append(item)
 
     return data
+
+def get_gallery():
+    gallery = []
+    for file in os.listdir(application.config['GALLERY_DIR_ABSOLUTE']):
+        if file.endswith(".png") or file.endswith(".jpg") or file.endswith(".jpeg"):
+            gallery.append(os.path.join(application.config['STATIC_DIR'], application.config['GALLERY_DIR'], file))
+    return gallery
 
 @application.context_processor
 def group_rows():

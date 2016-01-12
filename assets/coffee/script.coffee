@@ -32,3 +32,20 @@ $("#btn-donate").click (e)->
 $(window).on 'popstate', ->
   stripeHandler.close()
   return
+
+$(window).on "load", ()->
+  # make gallery responsive
+  previousRow = null
+  $("#gallery .gallery .row").each (i, row)->
+    if previousRow != null
+      $(row).children().each (j, img)->
+        rowDiff = $(previousRow).height() - $($(previousRow).children()[j]).height()
+        colDiff = parseInt($(img).css('padding-left').replace("px", "")) + parseInt($(img).css('padding-right').replace("px", ""))
+        console.log colDiff
+        if rowDiff > colDiff
+          $(img).css "margin-top", "-#{rowDiff - colDiff}px"
+        return
+    previousRow = row
+    return
+  return
+

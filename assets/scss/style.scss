@@ -50,6 +50,14 @@ $yellow: #9D861F;
   }
 }
 
+#gallery {
+  .gallery {
+    img {
+      display: inline-block;
+    }
+  }
+}
+
 #donate {
   .info {
     margin: 50px 0;

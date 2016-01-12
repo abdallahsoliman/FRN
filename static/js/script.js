@@ -40,6 +40,25 @@
     stripeHandler.close();
   });
 
+  $(window).on("load", function() {
+    var previousRow;
+    previousRow = null;
+    $("#gallery .gallery .row").each(function(i, row) {
+      if (previousRow !== null) {
+        $(row).children().each(function(j, img) {
+          var colDiff, rowDiff;
+          rowDiff = $(previousRow).height() - $($(previousRow).children()[j]).height();
+          colDiff = parseInt($(img).css('padding-left').replace("px", "")) + parseInt($(img).css('padding-right').replace("px", ""));
+          console.log(colDiff);
+          if (rowDiff > colDiff) {
+            $(img).css("margin-top", "-" + (rowDiff - colDiff) + "px");
+          }
+        });
+      }
+      previousRow = row;
+    });
+  });
+
 }).call(this);
 
 //# sourceMappingURL=script.js.map
