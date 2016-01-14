@@ -13,3 +13,15 @@ height: 200
 name: Panera
 img: panera.png
 height: 200
+---
+name: Christian Church
+img: christian-church.png
+height: 200
+---
+name: Hunger Network of Greater Cleveland
+img: hunger-network-cle.png
+height: 200
+---
+name: CWRU Greek Life
+img: cwru-greek.png
+height: auto
