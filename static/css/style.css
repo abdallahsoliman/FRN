@@ -59,6 +59,10 @@
 #donate #donate-money-container .donate-money .btn {
   padding: 10px 10px 11px 10px; }
 
+#sponsors .client-logo {
+  border: none;
+  margin-bottom: 20px; }
+
 #contact .contact-item span {
   display: block; }
 #contact .validate-error {
