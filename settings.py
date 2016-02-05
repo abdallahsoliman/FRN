@@ -10,3 +10,9 @@ class Common:
         'secret': os.environ['STRIPE_SECRET'],
         'publishable': os.environ['STRIPE_PUBLISHABLE']
     }
+    MAIL_SERVER = 'smtp.sendgrid.net'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ['SENDGRID_USER']
+    MAIL_PASSWORD = os.environ['SENDGRID_PASSWORD']
+    MAIL_RECIPIENTS = ["ass51@case.edu"]

@@ -105,4 +105,14 @@ $yellow: #9D861F;
       display: block;
     }
   }
+  .validate-error {
+    color: #8e1e13;
+    margin-bottom: 10px;
+    font-weight: 100;
+    display: block;
+  }
+
+  .alert {
+    margin-top: 20px;
+  }
 }

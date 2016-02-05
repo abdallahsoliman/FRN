@@ -61,5 +61,12 @@
 
 #contact .contact-item span {
   display: block; }
+#contact .validate-error {
+  color: #8e1e13;
+  margin-bottom: 10px;
+  font-weight: 100;
+  display: block; }
+#contact .alert {
+  margin-top: 20px; }
 
 /*# sourceMappingURL=style.css.map */
