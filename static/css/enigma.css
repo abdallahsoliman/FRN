@@ -222,7 +222,7 @@ p {
 }
 
 .navigation-overlay {
-  background-color: rgba(17,17,17,.5);
+  background-color: rgba(32,32,32,1);
   width: 100%;
   line-height: 0;
   -webkit-transition: all 0.3s ease-in-out;
@@ -233,7 +233,7 @@ p {
 }
 
 .navigation-overlay.sticky {
-  background-color: rgba(17,17,17,1);
+  background-color: rgba(32, 32, 32,1);
   visibility: visible;
   opacity: 1;
 }
