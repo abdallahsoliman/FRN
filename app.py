@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request
 from settings import Common
+from flask_mail import Mail, Message
+from smtplib import SMTPException
 import yaml, os, re
 import stripe
 
-
 application = Flask(__name__)
 application.config.from_object(Common)
+
+mail = Mail(application)
 stripe.api_key = application.config['STRIPE_KEYS']['secret']
 
 @application.route("/")
@@ -88,5 +91,25 @@ def is_last():
         return data[-1] == item
     return dict(is_last=_is_last)
 
+
+@application.route('/mail', methods=['POST'])
+def send_mail():
+    msg = Message(
+            subject="%s from %s via soliman.io" % (request.form['subject'], request.form['name']),
+            sender=request.form['email'],
+            recipients=application.config['MAIL_RECIPIENTS'],
+            body=request.form['message']
+    )
+
+    try:
+        mail.send(msg)
+        message = "Thank you for reaching out, we will get back to you as soon as possible."
+        status="success"
+    except SMTPException as ex:
+        print(ex)
+        message = "Sorry, we are having trouble sending your email at the moment."
+        status = "danger"
+    return render_template('base/alert.html', message=message, status=status)
+
 if __name__ == "__main__":
-    application.run(host="0.0.0.0", port=8000, debug=True)
+    application.run(host="0.0.0.0", port=8000)

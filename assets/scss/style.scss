@@ -99,10 +99,31 @@ $yellow: #9D861F;
   }
 }
 
+#sponsors {
+  .client-logo {
+    border: none;
+    margin-bottom: 20px;
+  }
+}
+
 #contact {
   .contact-item {
     span {
       display: block;
     }
+  }
+  .validate-error {
+    color: #8e1e13;
+    margin-bottom: 10px;
+    font-weight: 100;
+    display: block;
+  }
+
+  .btn-submit {
+    float: right;
+  }
+
+  .alert {
+    margin-top: 20px;
   }
 }
