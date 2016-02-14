@@ -1,24 +1,5 @@
-name: Event 1
+name: Health & Disease Management Info Session
 date: 12/15/2015
-description: This is the description, come to the event homie
-flyer_img: flyer.jpg
+description: Learn about simple dietary & lifestyle changes to manage and prevent GOUT DIABETES, HEART DISEASE, and other health information to live your best life! Presented by CWRU Medical Students & Food Recovery Network
+flyer_img: health-flyer.jpg
 height: auto
----
-name: Event 2
-date: 12/15/2015
-description: This is the description, come to the event homie
-flyer_img: flyer.jpg
-height: auto
----
-name: Event 3
-date: 12/15/2015
-description: This is the description, come to the event homie
-flyer_img: flyer.jpg
-height: auto
----
-name: Event 4
-date: 12/15/2015
-description: This is the description, come to the event homie
-flyer_img: flyer.jpg
-height: auto
-

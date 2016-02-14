@@ -15,4 +15,4 @@ class Common:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ['SENDGRID_USER']
     MAIL_PASSWORD = os.environ['SENDGRID_PASSWORD']
-    MAIL_RECIPIENTS = ["ass51@case.edu"]
+    MAIL_RECIPIENTS = ["frnexec@case.edu"]
